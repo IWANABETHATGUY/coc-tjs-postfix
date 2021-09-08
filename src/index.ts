@@ -2,8 +2,6 @@ import { ExtensionContext, services, workspace, LanguageClient } from 'coc.nvim'
 
 export async function activate(context: ExtensionContext): Promise<void> {
   // BEGIN NEW CODE
-  const config = workspace.getConfiguration('tjs-postfix');
-  const templateList: any[] = config.get<any[]>('templateMapList', []);
   // END NEW CODE
   const serverOptions = {
     command: 'tjs-language-server', // run jls
